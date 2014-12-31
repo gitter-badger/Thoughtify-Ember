@@ -1,0 +1,14 @@
+<div>
+	<h1 style="text-align:center;">Bring your ideas to life</h1>
+</div>
+
+{{input type="text" value=ideaTitle action="addIdea"}}
+<button {{action "addIdea"}}>Add Idea!</button>
+
+<div>
+	<ul id="ideas">
+		{{#each idea in model}}
+			<li><h3>{{idea.title}}</h3><p>{{idea.body}}</p></li>
+		{{/each}}
+	</ul>
+</div>
