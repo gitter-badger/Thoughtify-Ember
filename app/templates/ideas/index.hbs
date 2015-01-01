@@ -2,16 +2,16 @@
 	<h1 style="text-align:center;">Bring your ideas to life</h1>
 </div>
 
-<form class="form-inline">
+<form class="form-inline" {{action "addIdea" on="submit"}}>
 	<div class="form-group">
 		<label for="title" class="sr-only">Title</label>	
-		{{input id="title" class="form-control" type="text" placeholder="Enter title" value=ideaTitle action="addIdea"}}
+		{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
 	</div>
 	<div class="form-group">
 		<label for="body" class="sr-only">Idea Body</label>
-		{{input id="body" class="form-control" type="text" placeholder="Elaborate" value=ideaBody action="addIdea"}}
+		{{input id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
 	</div>
-	<button type="button" class="btn btn-default" {{action "addIdea"}}>
+	<button type="submit" class="btn btn-default" {{action "addIdea"}}>
 		Submit your idea!
 	</button>
 </form>
