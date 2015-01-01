@@ -2,8 +2,9 @@
 	<h1 style="text-align:center;">Bring your ideas to life</h1>
 </div>
 
-{{input type="text" value=ideaTitle action="addIdea"}}
-<button {{action "addIdea"}}>Add Idea!</button>
+{{input type="text" placeholder="Title" value=ideaTitle action="addIdea"}}
+{{input type="text" placeholder="Body" value=ideaBody action="addIdea"}}
+<button class="btn btn-default" {{action "addIdea"}}>Submit your idea!</button>
 
 <div>
 	<ul id="ideas">
@@ -11,7 +12,6 @@
 			<li> <button class="btn btn-default" {{action "delIdea" idea}}>{{fa-icon "close"}}</button> 
 			<div class="idea">
 				<span class="h3"> {{idea.title}}</span>
-
 				<p>{{idea.body}}</p>
 			</div>
 			</li>
