@@ -6,18 +6,25 @@ ul#ideas {
 	padding: 10px 0 0 0;
 }
 
-ul#ideas > li {
+ul#ideas > div.container-fluid > div.row > li {
 	list-style-type: none;
 	list-style-position: inside;
 	margin: 0px;
 	padding: 5px;
 }
 
-ul#ideas > li > button {
+ul#ideas > div.container-fluid > div.row > li button.killIdea {
 	float: left;
-	border: none;
+	width: 100%;
+	height: 100%;
 }
 
-ul#ideas > li > div.idea {
+ul#ideas > div.container-fluid > div.row > li button.visitIdea {
+	width:100%;
+	height:100%;
+	float: right;
+}
+
+ul#ideas > div.container-fluid > div.row > li div.idea {
 	display:table-cell;
 }

@@ -8,14 +8,34 @@
 
 <div>
 	<ul id="ideas">
-		{{#each idea in model}}
-			<li> <button class="btn btn-default" {{action "destroyIdea" idea}}>{{fa-icon "close"}}</button> 
-			<div style="cursor:pointer;" class="idea" {{action "transition" idea}}>
-				<span class="h3"> {{idea.title}}</span>
-				<p>{{idea.body}}</p>
+		<div class="container-fluid">
+			{{#each idea in model}}
+			<div class="row">
+				<li> 
+					<div class="col-xs-1">
+						{{!-- <div class="container"> --}}
+							<div class="row">
+								<div class="col-xs-12">
+									<button class="killIdea btn btn-danger" {{action "destroyIdea" idea}}>{{fa-icon "close"}}</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<button class="visitIdea btn btn-default" {{action "visitIdea" idea}}> {{fa-icon "angle-double-right"}} </button>
+								</div>
+							</div>
+						{{!-- </div> --}}
+					</div>
+					
+					<div class="idea col-xs-11">
+						<span class="h3"> {{idea.title}} </span>
+						<p>{{idea.body}}</p>
+					</div>
+				
+				</li>
 			</div>
-			</li>
 		{{/each}}
+		</div>
 	</ul>
 
 </div>

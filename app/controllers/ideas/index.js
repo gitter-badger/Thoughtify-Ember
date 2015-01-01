@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
 		destroyIdea: function(idea) {
 			idea.destroyRecord();
 		},
-		transition: function(idea) {
+		visitIdea: function(idea) {
 			this.transitionToRoute('ideas.id', idea);
 		}		
 	}
