@@ -2,6 +2,22 @@ html, body {
   margin: 10px;
 }
 
+ul#ideas {
+	padding: 10px 0 0 0;
+}
+
 ul#ideas > li {
 	list-style-type: none;
+	list-style-position: inside;
+	margin: 0px;
+	padding: 5px;
+}
+
+ul#ideas > li > button {
+	float: left;
+	border: none;
+}
+
+ul#ideas > li > div.idea {
+	display:table-cell;
 }

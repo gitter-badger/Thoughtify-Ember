@@ -8,7 +8,13 @@
 <div>
 	<ul id="ideas">
 		{{#each idea in model}}
-			<li><h3>{{idea.title}}</h3><p>{{idea.body}}</p></li>
+			<li> <button class="btn btn-default" {{action "delIdea" idea}}>{{fa-icon "close"}}</button> 
+			<div class="idea">
+				<span class="h3"> {{idea.title}}</span>
+
+				<p>{{idea.body}}</p>
+			</div>
+			</li>
 		{{/each}}
 	</ul>
 </div>

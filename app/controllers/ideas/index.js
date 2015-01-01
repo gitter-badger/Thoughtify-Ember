@@ -12,6 +12,9 @@ export default Ember.Controller.extend({
 				});
 				this.set('ideaTitle', '');
 			}.bind(this));
+		},
+		delIdea: function(idea) {
+			idea.destroyRecord();
 		}
 	}
 });
