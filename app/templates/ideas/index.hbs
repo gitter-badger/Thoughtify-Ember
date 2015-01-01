@@ -9,12 +9,13 @@
 <div>
 	<ul id="ideas">
 		{{#each idea in model}}
-			<li> <button class="btn btn-default" {{action "delIdea" idea}}>{{fa-icon "close"}}</button> 
-			<div class="idea">
+			<li> <button class="btn btn-default" {{action "destroyIdea" idea}}>{{fa-icon "close"}}</button> 
+			<div style="cursor:pointer;" class="idea" {{action "transition" idea}}>
 				<span class="h3"> {{idea.title}}</span>
 				<p>{{idea.body}}</p>
 			</div>
 			</li>
 		{{/each}}
 	</ul>
+
 </div>

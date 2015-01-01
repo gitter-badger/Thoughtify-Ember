@@ -15,8 +15,11 @@ export default Ember.Controller.extend({
 				this.set('ideaBody', '');
 			}.bind(this));
 		},
-		delIdea: function(idea) {
+		destroyIdea: function(idea) {
 			idea.destroyRecord();
 		},
+		transition: function(idea) {
+			this.transitionToRoute('ideas.id', idea);
+		}		
 	}
 });
