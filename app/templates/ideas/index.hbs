@@ -1,51 +1,64 @@
-<div>
-	<h1 style="text-align:center;">Bring your ideas to life</h1>
-</div>
-
-<form class="form-inline" {{action "addIdea" on="submit"}}>
-	<div class="form-group">
-		<label for="title" class="sr-only">Title</label>	
-		{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
-	</div>
-	<div class="form-group">
-		<label for="body" class="sr-only">Idea Body</label>
-		{{input id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
-	</div>
-	<button type="submit" class="btn btn-default" {{action "addIdea"}}>
-		Submit your idea!
-	</button>
-</form>
-
-<div>
-	<ul id="ideas">
-		<div class="container-fluid">
-			{{#each idea in model}}
-			<div class="row">
-				<li> 
-					<div class="col-xs-1">
-						{{!-- <div class="container"> --}}
-							<div class="row">
-								<div class="col-xs-12">
-									<button class="killIdea btn btn-danger" {{action "destroyIdea" idea}}>{{fa-icon "close"}}</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<button class="visitIdea btn btn-default" {{action "visitIdea" idea}}> {{fa-icon "angle-double-right"}} </button>
-								</div>
-							</div>
-						{{!-- </div> --}}
-					</div>
-					
-					<div class="idea col-xs-11">
-						<span class="h3"> {{idea.title}} </span>
-						<p>{{idea.body}}</p>
-					</div>
-				
-				</li>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-12">
+				<div>
+					<h1 style="text-align:center;">Bring your ideas to life</h1>
+				</div>
 			</div>
-		{{/each}}
 		</div>
-	</ul>
 
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-inline" {{action "addIdea" on="submit"}}>
+					<div class="form-group">
+						<label for="title" class="sr-only">Title</label>	
+						{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
+					</div>
+					<div class="form-group">
+						<label for="body" class="sr-only">Idea Body</label>
+						{{input id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
+					</div>
+					<button type="submit" class="btn btn-default" {{action "addIdea"}}>
+						Submit your idea!
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<ul id="ideas">
+					{{#each idea in model}}
+						<div class="row">
+							<div class="col-xs-12">
+								<li>
+									<div class="row">
+										<div class="col-xs-3 col-sm-2">
+											<div class="row">
+												<div class="col-xs-12">
+													<button class="killIdea btn btn-danger" {{action "destroyIdea" idea}}>{{fa-icon "close"}}</button>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12">
+													<button class="visitIdea btn btn-default" {{action "visitIdea" idea}}> {{fa-icon "angle-double-right"}} </button>
+												</div>
+											</div>
+										</div>
+										
+										<div class="idea col-xs-9 col-sm-10">
+											<span class="h3"> {{idea.title}} </span>
+											<p>{{idea.body}}</p>
+										</div>
+									</div>
+								
+								</li>
+							</div>
+						</div>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
