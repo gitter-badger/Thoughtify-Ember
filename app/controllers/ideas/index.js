@@ -5,15 +5,13 @@ export default Ember.Controller.extend({
 	ideaBody: "",
 	actions: {
 		addIdea: function() {
-			this.store.find('idea').then(function(ideas){
-				this.store.push('idea', {
-					id: ideas.get('length') + 1,
-					title: this.get('ideaTitle'),
-					body: this.get('ideaBody'),
-				});
-				this.set('ideaTitle', '');
-				this.set('ideaBody', '');
-			}.bind(this));
+			this.store.push('idea', {
+				id: String(Math.random()).slice(2),
+				title: this.get('ideaTitle'),
+				body: this.get('ideaBody'),
+			});
+			this.set('ideaTitle', '');
+			this.set('ideaBody', '');
 		},
 		destroyIdea: function(idea) {
 			idea.destroyRecord();
