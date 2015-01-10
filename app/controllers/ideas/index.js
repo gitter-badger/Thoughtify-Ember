@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
 			idea.destroyRecord();
 		},
 		visitIdea: function(idea) {
-			this.transitionToRoute('ideas.id', idea);
+			this.transitionToRoute('ideas.idea', idea);
 		}		
 	}
 });

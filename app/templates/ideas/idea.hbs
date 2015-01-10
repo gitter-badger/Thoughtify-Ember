@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h2 style="text-align:center;"> 
+			{{#link-to "ideas.idea" this }}
+				{{this.title}}
+			{{/link-to}}
+		</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-4">
+		<img class="ideaImage" {{bind-attr src=this.url}} />
+	</div>
+	<div class="col-xs-8">
+		<p>{{this.body}} </p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<h1>Comments Section</h1>
+		{{#each comment in model.comments}}
+			{{comment.author}}
+		{{/each}}
+	</div>
+</div>
+
