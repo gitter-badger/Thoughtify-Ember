@@ -9,23 +9,10 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12">
-				<form class="form-horizontal col-xs-12" {{action "addIdea" on="submit"}}>
-					<div class="form-group">
-						<label for="title" class="sr-only">Title</label>	
-						{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
-					</div>
-					<div class="form-group">
-						<label for="body" class="sr-only">Idea Body</label>
-						{{textarea rows="3" id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-success form-control" {{action "addIdea"}}>
-							Submit your idea!
-						</button>
-					</div>
-				</form>
-			</div>
+			{{!-- <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#ideaSubmit">Click to open Modal</a> --}}
+			<a href="#" class="btn btn-lg btn-success"
+   data-toggle="modal"
+   data-target="#basicModal">Click to open Modal</a>
 		</div>
 
 		<div class="row">
@@ -63,4 +50,30 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+	<div class="row modal-header">
+		<div class="col-xs-12">
+			<h1> Submit your Idea!</h1>
+		</div>
+	<div class="row modal-body">
+		<div class="col-xs-12">
+			<form class="form-horizontal col-xs-12" {{action "addIdea" on="submit"}}>
+				<div class="form-group">
+					<label for="title" class="sr-only">Title</label>	
+					{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
+				</div>
+				<div class="form-group">
+					<label for="body" class="sr-only">Idea Body</label>
+					{{textarea rows="3" id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-success form-control" {{action "addIdea"}}>
+						Submit your idea!
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>ember 
 </div>
