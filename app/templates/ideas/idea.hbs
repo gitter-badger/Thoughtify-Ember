@@ -24,7 +24,6 @@
 				<h1 style="text-align:center;">Comments Section</h1>
 			</div>
 		</div>
-		
 		{{#each comment in model.comments}}
 			<div class="row">
 				<div class="col-xs-12">
@@ -33,7 +32,7 @@
 						<footer>
 							Author:
 							<cite>
-								{{comment.author}}
+								{{comment.author.username}}
 							</cite>
 						</footer>
 					</blockquote>
