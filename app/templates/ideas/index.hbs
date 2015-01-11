@@ -1,18 +1,43 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-11">
 				<div>
 					<h1 style="text-align:center;">Bring your ideas to life</h1>
 				</div>
 			</div>
-		</div>
+			<div class="col-xs-1">
+				<a href="#" style="margin: 15px 0;" class="btn btn-success" data-toggle="modal" data-target="#submitIdea">{{fa-icon "plus"}}</a>
 
-		<div class="row">
-			{{!-- <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#ideaSubmit">Click to open Modal</a> --}}
-			<a href="#" class="btn btn-lg btn-success"
-   data-toggle="modal"
-   data-target="#basicModal">Click to open Modal</a>
+				<div class="modal fade" id="submitIdea" tabindex="-1" role="dialog" aria-labelledby="submitIdea" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h1> Submit your Idea!</h1>
+							<form class="form-horizontal" {{action "addIdea" on="submit"}}>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="title" class="sr-only">Title</label>	
+										{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
+									</div>
+									<div class="form-group">
+										<label for="body" class="sr-only">Idea Body</label>
+										{{textarea rows="3" id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
+									</div>
+								</div>
+								<div class="modal-footer">
+									<div class="form-group">
+										<button type="submit" class="btn btn-success" data-dismiss="modal" {{action "addIdea"}}>
+											Submit your idea!
+										</button>
+									</div>	
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="row">
@@ -41,7 +66,6 @@
 											<p>{{idea.body}}</p>
 										</div>
 									</div>
-								
 								</li>
 							</div>
 						</div>
@@ -50,30 +74,4 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-	<div class="row modal-header">
-		<div class="col-xs-12">
-			<h1> Submit your Idea!</h1>
-		</div>
-	<div class="row modal-body">
-		<div class="col-xs-12">
-			<form class="form-horizontal col-xs-12" {{action "addIdea" on="submit"}}>
-				<div class="form-group">
-					<label for="title" class="sr-only">Title</label>	
-					{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
-				</div>
-				<div class="form-group">
-					<label for="body" class="sr-only">Idea Body</label>
-					{{textarea rows="3" id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
-				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-success form-control" {{action "addIdea"}}>
-						Submit your idea!
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>ember 
 </div>
