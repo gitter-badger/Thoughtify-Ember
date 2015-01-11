@@ -26,7 +26,7 @@
 		</div>
 		{{#each comment in model.comments}}
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-10">
 					<blockquote>
 						{{comment.body}}
 						<footer>
@@ -36,6 +36,10 @@
 							</cite>
 						</footer>
 					</blockquote>
+				</div>
+
+				<div class="col-xs-2">
+					<img {{bind-attr src=comment.author.avatar}} class="commentImage">
 				</div>
 			</div>
 		{{/each}}
