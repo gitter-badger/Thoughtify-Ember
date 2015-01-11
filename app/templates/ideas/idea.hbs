@@ -9,7 +9,7 @@
 </div>
 <div class="row">
 	<div class="col-xs-4">
-		<img class="ideaImage" {{bind-attr src=model.image}} />
+		<img {{bind-attr src=model.image}} alt="Idea Image" class="ideaImage img-responsive"/>
 	</div>
 	<div class="col-xs-8">
 		<p>{{model.body}} </p>
@@ -39,7 +39,7 @@
 				</div>
 
 				<div class="col-xs-2">
-					<img {{bind-attr src=comment.author.avatar}} class="commentImage">
+					<img {{bind-attr src=comment.author.avatar}} alt="Author Avatar" class="commentImage img-responsive">
 				</div>
 			</div>
 		{{/each}}
