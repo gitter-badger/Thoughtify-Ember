@@ -10,18 +10,20 @@
 
 		<div class="row">
 			<div class="col-xs-12">
-				<form class="form-inline" {{action "addIdea" on="submit"}}>
+				<form class="form-horizontal col-xs-12" {{action "addIdea" on="submit"}}>
 					<div class="form-group">
 						<label for="title" class="sr-only">Title</label>	
 						{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
 					</div>
 					<div class="form-group">
 						<label for="body" class="sr-only">Idea Body</label>
-						{{input id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
+						{{textarea rows="3" id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
 					</div>
-					<button type="submit" class="btn btn-default" {{action "addIdea"}}>
-						Submit your idea!
-					</button>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success form-control" {{action "addIdea"}}>
+							Submit your idea!
+						</button>
+					</div>
 				</form>
 			</div>
 		</div>
