@@ -4,7 +4,7 @@ var Idea = DS.Model.extend({
 	title: DS.attr('string'),
 	body: DS.attr('string'),
 	author: DS.attr('string'),
-	url: DS.attr('string', { defaultValue: "http://placehold.it/400x500"}),
+	image: DS.attr('string', { defaultValue: "http://placehold.it/400x500"}),
 	comments: DS.hasMany('comment', {async: true})
 });
 
