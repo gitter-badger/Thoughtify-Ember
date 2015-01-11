@@ -25,7 +25,23 @@ export default Ember.Controller.extend({
 				});
 
 			}).catch(function(reason){
-				console.log('an error occured');
+				$.growl({
+					message: reason.message,
+					title: "<b>Error: </b>"
+				}, {
+					type: "danger",
+					placement: {
+						"from": "bottom",
+						"align": "right"
+					},
+					offset: 20,
+					delay: 3000,
+					animate: {
+						enter: 'animated fadeInUp',
+						exit: 'animated fadeOutDown'
+					},
+
+				});
 			});
 		}
 	}
