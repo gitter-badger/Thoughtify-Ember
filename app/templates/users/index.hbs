@@ -1,9 +1,7 @@
-{{#each row in grid}}
-	<div class="row">
-		{{#each user in row}}
-			<div {{bind-attr class=bootstrapXSClass}}>
-				{{user-profile-digest user=user show='showUserProfile'}}
-			</div>
-		{{/each}}
-	</div>
-{{/each}}
+<div class="row">
+	{{#each user in model}}
+		<div class="col-xs-3">
+			{{user-profile-digest user=user show='showUserProfile'}}
+		</div>
+	{{/each}}
+</div>
