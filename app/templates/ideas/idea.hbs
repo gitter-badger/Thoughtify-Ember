@@ -25,23 +25,7 @@
 			</div>
 		</div>
 		{{#each comment in model.comments}}
-			<div class="row">
-				<div class="col-xs-10">
-					<blockquote>
-						{{comment.body}}
-						<footer>
-							Author:
-							<cite>
-								{{comment.author.username}}
-							</cite>
-						</footer>
-					</blockquote>
-				</div>
-
-				<div class="col-xs-2">
-					<img {{bind-attr src=comment.author.avatar}} alt="Author Avatar" class="commentImage img-responsive img-circle">
-				</div>
-			</div>
+			{{idea-comment comment=comment}}
 		{{/each}}
 
 		<div class="row">
