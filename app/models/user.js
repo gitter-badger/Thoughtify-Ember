@@ -3,7 +3,7 @@ import DS from 'ember-data';
 var User = DS.Model.extend({
 	email: DS.attr('string'),
 	username: DS.attr('string'),
-	avatar: DS.attr('string', {defaultValue: "http://placehold.it/100x100"}),
+	avatar: DS.attr('string', {defaultValue: "http://placehold.it/300x200"}),
 	comments: DS.hasMany('comment', {async: true}),
 	ideas: DS.hasMany('idea', {async: true})
 });
