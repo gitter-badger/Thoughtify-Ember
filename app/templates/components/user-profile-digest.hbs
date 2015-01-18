@@ -1,8 +1,10 @@
 <div class="row user-profile-digest" {{action 'show'}}>
 	<div class="col-xs-12">
-		<img {{bind-attr src=user.avatar}} class="img-responsive img-thumbnail" alt="User Avatar">
-		<button class="username btn btn-default btn-block">
-			{{user.username}}
-		</button>
+		<div class="fade-background">
+			<img {{bind-attr src=user.avatar}} class="img-responsive img-thumbnail transparent-background" alt="User Avatar">
+			<button class="username transparent-background btn btn-default btn-block">
+				{{user.username}}
+			</button>
+		</div>
 	</div>
 </div>

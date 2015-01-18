@@ -7,9 +7,17 @@ div.user-profile-digest {
 		border: none;
 	}
 
-	.username:hover {
-		transition: background-color 0.25s ease;
-		background-color: #E6E6E6;
+	img:hover {
+		background-color: #E0E0E0;
+	}
+	
+	.fade-background {
+		border-radius: 4px;
+	}
+
+	.fade-background:hover {
+		transition: background-color 0.5s ease;
+		background-color: #F0F0F0;
 	}
 
 }
