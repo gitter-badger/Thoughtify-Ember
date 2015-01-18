@@ -1,1 +1,26 @@
-{{outlet}}
+<div id="user-profile">
+	<div class="row">
+		<div class="col-xs-3">
+			<img {{bind-attr src=avatar}} class="img-responsive img-thumbnail" alt="User Profile Image">
+		</div>
+		<div class="col-xs-8">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 id="username">
+						{{username}}
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<span>{{about}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			{{outlet}}	
+		</div>
+	</div>
+</div>
