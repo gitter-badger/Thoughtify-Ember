@@ -8,6 +8,7 @@ div.user-profile-digest {
 	}
 
 	img:hover {
+		transition: background-color 0.5s ease;
 		background-color: #E0E0E0;
 	}
 	
@@ -16,7 +17,7 @@ div.user-profile-digest {
 	}
 
 	.fade-background:hover {
-		transition: background-color 0.5s ease;
+		transition: background-color 0.65s ease;
 		background-color: #F0F0F0;
 	}
 
