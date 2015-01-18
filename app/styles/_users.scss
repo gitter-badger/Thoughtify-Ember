@@ -4,6 +4,12 @@ div.user-profile-digest {
 
 	.username {
 		margin-bottom:10px;
+		border: none;
+	}
+
+	.username:hover {
+		transition: background-color 0.25s ease;
+		background-color: #E6E6E6;
 	}
 
 }
