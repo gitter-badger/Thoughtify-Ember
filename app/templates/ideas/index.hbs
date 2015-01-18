@@ -1,28 +1,13 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-11">
 				<div>
-					<h1 style="text-align:center;">Bring your ideas to life</h1>
+					<h1 style="text-align:center; margin: 15px 0;">Bring your ideas to life</h1>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12">
-				<form class="form-inline" {{action "addIdea" on="submit"}}>
-					<div class="form-group">
-						<label for="title" class="sr-only">Title</label>	
-						{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
-					</div>
-					<div class="form-group">
-						<label for="body" class="sr-only">Idea Body</label>
-						{{input id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
-					</div>
-					<button type="submit" class="btn btn-default" {{action "addIdea"}}>
-						Submit your idea!
-					</button>
-				</form>
+			<div class="col-xs-1">
+				<button style="margin: 15px 0;" class="btn btn-success" {{action 'showModal' 'submit-idea-modal'}}><strong>Submit Idea</strong>&nbsp;&nbsp;{{fa-icon "plus"}}</button>
 			</div>
 		</div>
 
@@ -52,7 +37,6 @@
 											<p>{{idea.body}}</p>
 										</div>
 									</div>
-								
 								</li>
 							</div>
 						</div>

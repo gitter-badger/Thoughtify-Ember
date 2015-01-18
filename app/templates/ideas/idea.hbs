@@ -9,7 +9,7 @@
 </div>
 <div class="row">
 	<div class="col-xs-4">
-		<img class="ideaImage" {{bind-attr src=model.url}} />
+		<img {{bind-attr src=model.image}} alt="Idea Image" class="ideaImage img-responsive img-rounded"/>
 	</div>
 	<div class="col-xs-8">
 		<p>{{model.body}} </p>
@@ -24,19 +24,22 @@
 				<h1 style="text-align:center;">Comments Section</h1>
 			</div>
 		</div>
-		
 		{{#each comment in model.comments}}
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-10">
 					<blockquote>
 						{{comment.body}}
 						<footer>
 							Author:
 							<cite>
-								{{comment.author}}
+								{{comment.author.username}}
 							</cite>
 						</footer>
 					</blockquote>
+				</div>
+
+				<div class="col-xs-2">
+					<img {{bind-attr src=comment.author.avatar}} alt="Author Avatar" class="commentImage img-responsive img-circle">
 				</div>
 			</div>
 		{{/each}}
@@ -64,7 +67,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-xs-12">
-							<button type="submit" class="btn btn-success col-xs-12" {{action 'postComment' model on="click"}}>Post Comment!</button>
+							<button type="submit" class="btn btn-success col-xs-12" {{action 'postComment' on="click"}}>Post Comment!</button>
 						</div>
 					</div>
 				</form>
