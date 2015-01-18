@@ -20,7 +20,29 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			{{outlet}}	
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active">
+					<a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+				</li>
+				<li role="presentation">
+					<a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a>
+				</li>
+				<li role="presentation">
+					<a href="#likes" aria-controls="likes" role="tab" data-toggle="tab">Likes</a>
+				</li>
+			</ul>
+			
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="home">
+					Home
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="comments">
+					Comments
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="likes">
+					Likes
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
