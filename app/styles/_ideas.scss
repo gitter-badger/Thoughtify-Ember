@@ -1,0 +1,30 @@
+ul#ideas {
+	padding: 10px 0 0 0;
+	
+	li {
+
+		margin: 0px;
+		padding: 5px;
+
+		button.ideaBtn {
+			width: 100%;
+			height: 100%;
+		}
+
+		div.idea {
+			display:table-cell;
+		}
+	}
+}
+
+img.ideaImage {
+	width:100%;
+	height:400px;
+}
+
+button#submitIdea {
+	margin: 15px 0; 
+	position:absolute; 
+	right:0px; 
+	top:0px;
+}
