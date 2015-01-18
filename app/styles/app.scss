@@ -1,0 +1,34 @@
+div.container-fluid {
+  	margin: 10px;
+}
+
+ul#ideas {
+	padding: 10px 0 0 0;
+	
+	li {
+		
+		margin: 0px;
+		padding: 5px;
+
+		button.killIdea {
+			float: left;
+			width: 100%;
+			height: 100%;
+		}
+
+		button.visitIdea {
+			width:100%;
+			height:100%;
+			float: right;
+		}
+
+		div.idea {
+			display:table-cell;
+		}
+	}
+}
+
+img.ideaImage {
+	width:100%;
+	height:400px;
+}
