@@ -29,6 +29,9 @@ export default Ember.Controller.extend({
 					// relationship is lost
 					users[0].save();
 					self.get('model').save();
+
+					self.set('commentAuthor', '');
+					self.set('commentBody', '');
 				});
 
 			}).catch(function(reason){
