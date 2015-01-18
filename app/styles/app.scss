@@ -1,6 +1,9 @@
 @import 'ideas';
 @import 'users';
 
+// Including components
+@import 'components/user-profile-digest';
+
 div.container-fluid {
   	margin: 10px;
 }
