@@ -1,0 +1,16 @@
+{{#bs-modal title="What's the big idea?" buttonText="Submit Idea!" ok="addIdea" close="removeModal"}}
+	
+	<form {{action "ok" on="submit" target=view}}>
+				
+		<div class="form-group">
+			<label for="title" class="sr-only">Title</label>	
+			{{input id="title" class="form-control" type="text" placeholder="Enter the title" value=ideaTitle}}
+		</div>
+		<div class="form-group">
+			<label for="body" class="sr-only">Idea Body</label>
+			{{textarea rows="3" id="body" class="form-control" type="text" placeholder="elaborate..." value=ideaBody}}
+		</div>
+	
+	</form>
+
+{{/bs-modal}}

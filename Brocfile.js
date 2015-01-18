@@ -29,4 +29,10 @@ var extraAssets = pickFiles('bower_components/bootstrap/dist/fonts',{
     destDir: '/fonts'
 });
 
+// bootstrap growl dependencey: animate.css
+app.import('bower_components/animate.css/animate.min.css');
+
+// bootstrap growl
+app.import('bower_components/bootstrap.growl/dist/bootstrap-growl.min.js');
+
 module.exports = mergeTrees([app.toTree(), extraAssets]);

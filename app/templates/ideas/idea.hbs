@@ -1,0 +1,78 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h2 style="text-align:center;"> 
+			{{#link-to "ideas.idea" model }}
+				{{model.title}}
+			{{/link-to}}
+		</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-4">
+		<img {{bind-attr src=model.image}} alt="Idea Image" class="ideaImage img-responsive img-rounded"/>
+	</div>
+	<div class="col-xs-8">
+		<p>{{model.body}} </p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-12">
+				<br>
+				<h1 style="text-align:center;">Comments Section</h1>
+			</div>
+		</div>
+		{{#each comment in model.comments}}
+			<div class="row">
+				<div class="col-xs-10">
+					<blockquote>
+						{{comment.body}}
+						<footer>
+							Author:
+							<cite>
+								{{comment.author.username}}
+							</cite>
+						</footer>
+					</blockquote>
+				</div>
+
+				<div class="col-xs-2">
+					<img {{bind-attr src=comment.author.avatar}} alt="Author Avatar" class="commentImage img-responsive img-circle">
+				</div>
+			</div>
+		{{/each}}
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 style="text-align:center;">Submit your comment!</h1> <br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<form action="" class="form-horizontal">
+					<div class="form-group">
+						<label for="author" class="sr-only control-label">Name</label>
+						<div class="col-xs-12">
+							{{input id="author" type="text" value=commentAuthor class="form-control" placeholder="what's your name?"}}
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="body" class="sr-only control-label">Comment</label>
+						<div class="col-xs-12">
+							{{textarea id="body" value=commentBody class="form-control" rows="3" placeholder="Speak your mind..."}}
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-12">
+							<button type="submit" class="btn btn-success col-xs-12" {{action 'postComment' on="click"}}>Post Comment!</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
