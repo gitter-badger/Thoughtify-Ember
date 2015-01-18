@@ -1,11 +1,8 @@
 import DS from 'ember-data';
+import Thought from './thought';
 
-var Idea = DS.Model.extend({
+var Idea = Thought.extend({
 	title: DS.attr('string'),
-	body: DS.attr('string'),
-	upvotes: DS.attr('number'),
-	downvotes: DS.attr('number'),
-	author: DS.belongsTo('user', {async: true}),
 	image: DS.attr('string', { defaultValue: "http://placehold.it/400x500"}),
 	comments: DS.hasMany('comment', {async: true})
 });
