@@ -1,0 +1,9 @@
+{{#each row in grid}}
+	<div class="row">
+		{{#each user in row}}
+			<div {{bind-attr class=bootstrapXSClass}}>
+				{{user-profile-digest user=user show='showUserProfile'}}
+			</div>
+		{{/each}}
+	</div>
+{{/each}}
