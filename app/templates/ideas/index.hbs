@@ -15,7 +15,9 @@
 			<div class="col-xs-12">
 				<ul id="ideas" class="list-unstyled">
 					{{#each idea in model}}
+						<li>
 						{{idea-digest idea=idea close='destroyIdea' rightArr='visitIdea'}}
+						</li>
 					{{/each}}
 				</ul>
 			</div>

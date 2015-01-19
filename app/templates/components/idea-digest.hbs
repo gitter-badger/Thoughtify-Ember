@@ -1,25 +1,23 @@
 <div class="row">
 	<div class="col-xs-12">
-		<li>
-			<div class="row">
-				<div class="col-xs-3 col-sm-2">
-					<div class="row">
-						<div class="col-xs-12">
-							<button class="btn btn-danger btn-block" {{action "close"}}>{{fa-icon "close"}}</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<button class="btn btn-default btn-block" {{action "rightArr"}}> {{fa-icon "angle-double-right"}} </button>
-						</div>
+		<div class="row">
+			<div class="col-xs-3 col-sm-2">
+				<div class="row">
+					<div class="col-xs-12">
+						<button class="btn btn-danger btn-block" {{action "close"}}>{{fa-icon "close"}}</button>
 					</div>
 				</div>
-				
-				<div class="idea col-xs-9 col-sm-10">
-					<span class="h3"> {{idea.title}} </span>
-					<p>{{idea.body}}</p>
+				<div class="row">
+					<div class="col-xs-12">
+						<button class="btn btn-default btn-block" {{action "rightArr"}}> {{fa-icon "angle-double-right"}} </button>
+					</div>
 				</div>
 			</div>
-		</li>
+			
+			<div class="idea col-xs-9 col-sm-10">
+				<span class="h3"> {{idea.title}} </span>
+				<p>{{idea.body}}</p>
+			</div>
+		</div>
 	</div>
 </div>
