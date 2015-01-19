@@ -20,7 +20,7 @@
 		
 		{{#if authorAvatar}}
 		<div class="col-xs-2">
-			<img {{bind-attr src=comment.author.avatar}} alt="Author Avatar" class="comment-image img-responsive img-thumbnail">
+			<img {{bind-attr src=comment.author.avatar}} {{action 'avatarClick'}} alt="Author Avatar" class="comment-image img-responsive img-thumbnail">
 		</div>
 		{{/if}}
 	</div>
