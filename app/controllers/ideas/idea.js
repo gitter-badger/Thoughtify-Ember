@@ -53,6 +53,9 @@ export default Ember.Controller.extend({
 
 				});
 			});
+		},
+		showUserProfile: function(user) {
+			this.transitionToRoute('users.user', user);
 		}
 	}
 });
