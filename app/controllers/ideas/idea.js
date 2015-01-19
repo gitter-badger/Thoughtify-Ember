@@ -16,12 +16,22 @@ export default Ember.Controller.extend({
 				}
 
 				// take the first user and 
-				self.store.push('comment', {
+				self.store.createRecord('comment', {
 					id: String(Math.random()).slice(2),
 					author: users[0],
 					body: self.get('commentBody'),
-					idea: self.get('model.id'),
-					score: Number(String(Math.random()).slice(2,3))
+					idea: self.get('model'),
+					upvotes: Number(String(Math.random()).slice(2,3)),
+					downvotes: Number(String(Math.random()).slice(2,3))
+				}).save().then(function(){
+					// save the user after we've updated the comment
+					// otherwise, the user.comments to this comment's 
+					// relationship is lost
+					users[0].save();
+					self.get('model').save();
+
+					self.set('commentAuthor', '');
+					self.set('commentBody', '');
 				});
 
 			}).catch(function(reason){
@@ -43,6 +53,9 @@ export default Ember.Controller.extend({
 
 				});
 			});
+		},
+		showUserProfile: function(user) {
+			this.transitionToRoute('users.user', user);
 		}
 	}
 });

@@ -1,0 +1,27 @@
+<div class="idea-comment">
+	<div class="row">
+
+		{{#if authorAvatar}}
+			<div class="col-xs-10">
+		{{else}}
+			<div class="col-xs-12">
+		{{/if}}
+
+			<blockquote class="comment-body">
+				{{comment.body}}
+				<footer>
+					Author:
+					<cite>
+						{{comment.author.username}}
+					</cite>
+				</footer>
+			</blockquote>
+		</div>
+		
+		{{#if authorAvatar}}
+		<div class="col-xs-2">
+			<img {{bind-attr src=comment.author.avatar}} {{action 'avatarClick'}} alt="Author Avatar" class="comment-image img-responsive img-thumbnail">
+		</div>
+		{{/if}}
+	</div>
+</div>
