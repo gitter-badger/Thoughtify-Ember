@@ -5,8 +5,8 @@ export default Ember.Component.extend({
 		close: function(){
 			this.sendAction('close', this.get('idea'));
 		},
-		rightArr: function(){
-			this.sendAction('rightArr', this.get('idea'));
+		clickTitle: function(){
+			this.sendAction('clickTitle', this.get('idea'));
 		}
 	}
 });
