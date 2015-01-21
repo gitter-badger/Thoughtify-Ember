@@ -18,12 +18,16 @@
 
 <div class="row">
 	<div class="col-xs-12">
+
+		{{#if model.comments.length}}
 		<div class="row">
 			<div class="col-xs-12">
 				<br>
 				<h1 class="text-center">Comments Section</h1>
 			</div>
 		</div>
+		{{/if}}
+
 		{{#each comment in model.comments}}
 			{{idea-comment comment=comment authorAvatar=true avatarClick='showUserProfile'}}
 		{{/each}}
