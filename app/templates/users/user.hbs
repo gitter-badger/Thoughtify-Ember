@@ -25,7 +25,8 @@
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs">
 						{{!-- https://github.com/emberjs/ember.js/pull/1849 for explanation of the following lines --}}
-						
+						{{!-- alternate handlebars solution: http://stackoverflow.com/a/23153372/3026248 --}}
+
 						{{#link-to 'users.user.index' tagName='li' role="presentation"}}
 							{{#link-to 'users.user.index'}} Home {{/link-to}}
 						{{/link-to}}
