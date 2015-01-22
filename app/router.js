@@ -9,9 +9,12 @@ Router.map(function() {
 	this.resource('ideas', function() {
 		this.route('idea', {path:'/:idea_id'});
 	});
-  	this.resource('users', function(){
-  		this.route('user', {path:'/:user_id'});
-  	});
+	this.resource('users', function(){
+		this.resource('users.user', {path:'/:user_id'}, function(){
+			this.route('comments');
+			this.route('ideas');
+		});
+	});
 });
 
 export default Router;
